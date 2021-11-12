@@ -1,3 +1,4 @@
+QBCore = exports['qb-core']:GetCoreObject()
 isLoggedIn = true
 PlayerJob = {}
 
