@@ -114,8 +114,8 @@ Config.Items = {
 Config.Locations = {
     ["carspawn"] = {
        label = "Car Spawn",
-       coords = {x =-628.24, y =256.12, z =81.51, h =263.56},
-   },
+       coords = {x =282.27, y =-956.85, z =29.29, h =267.82}, -- coords = {x =-628.24, y =256.12, z =81.51, h =263.56},
+   }, 
 }
 
 Config.Vehicles = {

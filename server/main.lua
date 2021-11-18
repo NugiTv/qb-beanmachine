@@ -1,3 +1,4 @@
+QBCore = exports['qb-core']:GetCoreObject()
 RegisterServerEvent("qb-beanmachine:bill:player")
 AddEventHandler("qb-beanmachine:bill:player", function(playerId, amount)
         local biller = QBCore.Functions.GetPlayer(source)

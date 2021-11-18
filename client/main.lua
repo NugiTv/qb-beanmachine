@@ -43,7 +43,7 @@ AddEventHandler('QBCore:Client:SetDuty', function(duty)
     onDuty = duty
 end)
 
-Citizen.CreateThread(function()
+--[[Citizen.CreateThread(function() -- Commented out Blip - McKlean
     BeanMachine = AddBlipForCoord(-635.37, 235.45, 81.88)
     SetBlipSprite (BeanMachine, 106)
     SetBlipDisplay(BeanMachine, 4)
@@ -53,7 +53,7 @@ Citizen.CreateThread(function()
     BeginTextCommandSetBlipName("STRING")
     AddTextComponentSubstringPlayerName("Bean Machine")
     EndTextCommandSetBlipName(BeanMachine)
-end) 
+end) ]]
 
 Citizen.CreateThread(function()
     while true do 
@@ -179,7 +179,7 @@ AddEventHandler("qb-beanmachine:Tray1", function()
     TriggerEvent("inventory:client:SetCurrentStash", "pickupbean1")
     TriggerServerEvent("inventory:server:OpenInventory", "stash", "pickupbean1", {
         maxweight = 10000,
-        slots = 6,
+        slots = 5,
     })
 end)
 
@@ -206,10 +206,10 @@ end)
 Citizen.CreateThread(function()
     
 
-    exports['qb-target']:AddBoxZone("BeanDuty", vector3(-635.58, 227.17, 82.35), 1, 1.2, {
+    exports['qb-target']:AddBoxZone("BeanDuty", vector3(285.88, -978.73, 29.42), 1, 1.2, { -- vector3(-635.58, 227.17, 82.35)
         name = "BeanDuty",
         heading = 32,
-        debugPoly = false,
+        debugPoly = true,
         minZ=82.0,
         maxZ=83.0,
     }, {
@@ -224,10 +224,10 @@ Citizen.CreateThread(function()
         distance = 1.5
     })
 
-    exports['qb-target']:AddBoxZone("bean_tray_1", vector3(-634.13, 235.17, 82.19), 1.05, 1.0, {
+    exports['qb-target']:AddBoxZone("bean_tray_1", vector3(279.96, -972.47, 29.35), 1.05, 1.0, { -- vector3(-634.13, 235.17, 82.19)
         name = "bean_tray_1",
         heading = 35.0,
-        debugPoly = false,
+        debugPoly = true,
         minZ=82.0,
         maxZ=83.3,
     }, {
@@ -242,7 +242,7 @@ Citizen.CreateThread(function()
     })
 
 
- exports['qb-target']:AddBoxZone("beanmachinecoffee", vector3(-635.59, 236.38, 82.21), 1.8, 1.0, {
+ exports['qb-target']:AddBoxZone("beanmachinecoffee", vector3(279.36, -975.07, 29.41), 1.8, 1.0, { -- vector3(-635.59, 236.38, 82.21)
     name="beanmachinecoffee",
     heading=34,
     debugPoly=false,
@@ -261,7 +261,7 @@ Citizen.CreateThread(function()
     })
 
 
-        exports['qb-target']:AddBoxZone("beanfridge", vector3(-635.39, 233.56, 81.88), 1.6, 1, {
+        exports['qb-target']:AddBoxZone("beanfridge", vector3(279.52, -971.81, 29.42), 1.6, 1, { -- vector3(-635.39, 233.56, 81.88)
             name="beanfridge",
             heading=35,
             debugPoly=false,
@@ -279,7 +279,7 @@ Citizen.CreateThread(function()
                 distance = 1.5
             })
 
-        exports['qb-target']:AddBoxZone("beanmachinedisplay", vector3(-631.88, 228.05, 81.88), 4.6, 1.2, {
+        exports['qb-target']:AddBoxZone("beanmachinedisplay", vector3(280.89, -974.65, 29.42), 4.6, 1.2, { -- vector3(-631.88, 228.05, 81.88)
             name="beanmachinedisplay",
             heading=34,
             debugPoly=false,
@@ -298,7 +298,7 @@ Citizen.CreateThread(function()
             })
 
 
-        exports['qb-target']:AddBoxZone("BeanMachine_register_1", vector3(0, 0, 0), 0.5, 0.4, {
+        exports['qb-target']:AddBoxZone("BeanMachine_register_1", vector3(280.91, -972.66, 29.75), 0.5, 0.4, { -- vector3(0, 0, 0)
             name="BeanMachine_register_1",
             debugPoly=false,
             heading=125,
